@@ -1,0 +1,30 @@
+# Placeholder CI workflow — populated per-service from Phase 3 onwards.
+# This file exists to satisfy branch protection's required status check.
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-docs:
+    name: Lint documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify CHANGELOG updated
+        run: |
+          if git diff --name-only origin/main...HEAD | grep -q "CHANGELOG.md"; then
+            echo "CHANGELOG.md updated ✓"
+          else
+            echo "⚠️  CHANGELOG.md not updated — reminder, not blocking at this stage"
+          fi

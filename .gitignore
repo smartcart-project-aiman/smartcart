@@ -1,0 +1,91 @@
+# ─── Secrets — NEVER commit these ────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+secrets/
+vault-token
+
+# ─── Java ─────────────────────────────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/wrapper/maven-wrapper.jar
+hs_err_pid*
+.classpath
+.project
+.settings/
+*.iml
+
+# ─── Node / TypeScript ────────────────────────────────────────────
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.cache/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.env/
+*.egg-info/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+mlruns/
+mlartifacts/
+
+# ─── Docker ───────────────────────────────────────────────────────
+.dockerignore
+
+# ─── Kubernetes / Helm ────────────────────────────────────────────
+*.kubeconfig
+charts/*/charts/
+charts/*/tmpcharts/
+
+# ─── Terraform ────────────────────────────────────────────────────
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+
+# ─── IDE ──────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── Logs ─────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ─── Test output ──────────────────────────────────────────────────
+coverage/
+test-results/
+surefire-reports/
+
+# ─── Local tooling ────────────────────────────────────────────────
+.sonarqube/

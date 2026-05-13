@@ -1,0 +1,7 @@
+# Default owner for everything
+* @AimanShakeel1008
+
+# Architecture decisions require explicit review
+docs/adr/ @AimanShakeel1008
+docs/PRD.md @AimanShakeel1008
+docs/NFR.md @AimanShakeel1008
